@@ -1,0 +1,107 @@
+@import "../../_variables";
+
+.sidebar{
+  height: 100%;
+  background-color: $silver;
+  width: 300px;
+  .lists{
+    margin: 30px 30px;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 30px;
+    max-height: 500px;
+    .list{
+      display: flex;
+      span{
+        padding: 3px 10px;
+        &:hover{
+          background: rgba(255, 255, 255, 0.5);
+        }
+        flex: 1;
+      }
+      &_active{
+        background-color: $active ;
+      }
+    }
+    .delete{
+      justify-content: flex-end;
+    }
+
+  }
+  .form {
+    display: flex;
+    width: 100%;
+    & > span,
+    .input{
+      white-space: nowrap;
+      display: block;
+      &:not(:first-child):not(:last-child) {
+        border-radius: 0;
+      }
+      &:first-child {
+        border-radius: 6px 0 0 6px;
+      }
+      &:last-child {
+        border-radius: 0 6px 6px 0;
+      }
+      &:not(:first-child) {
+        margin-left: -1px;
+      }
+    }
+    .input {
+      position: relative;
+      z-index: 1;
+      flex: 1 1 auto;
+      width: 1%;
+      margin-left: 10px;
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+    & > span {
+      cursor: pointer;
+      margin-left: 10px;
+      margin-top: 10px;
+      margin-right: 10px;
+      margin-bottom: 0;
+      text-align: center;
+      padding: 8px 12px;
+      font-size: 14px;
+      line-height: 15px;
+      color: $silver;
+      background: $silver;
+      border: 1px solid $gray;
+      transition: background .3s ease, border .3s ease, color .3s ease;
+    }
+    &:focus-within {
+      & > span {
+        color: var(--group-color-focus);
+        background: var(--group-background-focus);
+        border-color: var(--group-border-focus);
+      }
+    }
+    .input {
+      display: block;
+      width: 200px;
+      padding: 5px 8px;
+      line-height: 15px;
+      font-size: 14px;
+      font-weight: 500;
+      font-family: inherit;
+      border-radius: 6px;
+      -webkit-appearance: none;
+      color: $black;
+      border: 1px solid $gray;
+      background: $with;
+      transition: border .3s ease;
+      &::placeholder {
+        color: $gray;
+      }
+      &:focus {
+        outline: none;
+        border-color: $black;
+      }
+    }
+  }
+
+}
+

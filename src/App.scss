@@ -1,0 +1,24 @@
+@import "./_variables";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: none;
+  font-family: 'Roboto', -apple-system, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper{
+  display: flex;
+  width: 800px;
+  height: 600px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid $with;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
+}
